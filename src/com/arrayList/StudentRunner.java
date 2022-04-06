@@ -29,7 +29,18 @@ public class StudentRunner {
          
 		System.out.println("student1 no of marks : " + student1.getNumOfMarks()); 
 
-
+        System.out.println(student ); 
+        
+        student.addMark(100); 
+        
+        System.out.println(student ); 
+        
+        student.removeMark(0); 
+        
+        System.out.println(student ); 
+        
+        
+//        System.out.println()
 
 
 		

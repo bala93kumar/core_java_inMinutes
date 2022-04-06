@@ -1,20 +1,28 @@
  package com.arrayList;
 
+import java.util.ArrayList;
+
 public class Student { 
 	
 	private String name; 
-	private int[] marks; 
-	
+//	private int[] marks; 
+    private ArrayList<Integer> marks = new ArrayList<Integer>(); 
+    
 	
 	public Student(String name , int... marks ) {
 		this.name = name ; 
-		this.marks = marks; 
+//		this.marks = marks; 
+		
+		for(int i : marks) {
+			this.marks.add(i); 
+		}
 		
 	}
 
 	public int getNumOfMarks() {
 		// TODO Auto-generated method stub
-		return  marks.length ;
+//		return  marks.length ;
+		return marks.size(); 
 	}
 
 	public int getTotalMark() {
@@ -56,6 +64,25 @@ public class Student {
 		int count = getNumOfMarks(); 
 		float avg = sum/count; 
 		return avg;
+		
+	}
+	
+	public String toString() {
+		
+		return name + marks; 
+	}
+
+	public void addMark(int i) {
+		// TODO Auto-generated method stub
+		
+		this.marks.add(i); 
+		
+	}
+
+	public void removeMark(int i) {
+		// TODO Auto-generated method stub
+		
+		marks.remove(i); 
 		
 	}
     
